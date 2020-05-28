@@ -1,0 +1,13 @@
+﻿  Sort.cpp
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(18): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(20): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(35): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(38): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(56): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(76): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(113): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(166): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(180): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(185): warning C4018: “<”: 有符号/无符号不匹配
+f:\c or c++\myalgorithm\myalgorithm\myalgorithm\sort.cpp(191): warning C4018: “<”: 有符号/无符号不匹配
+  Myalgorithm.vcxproj -> F:\C or C++\Myalgorithm\Myalgorithm\Debug\Myalgorithm.exe
