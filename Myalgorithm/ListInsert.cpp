@@ -5,7 +5,8 @@
 ListNode *ListInsert(vector<int> vec)
 {
 	if (vec.empty()) exit(1);
-	ListNode *phead, *pInsert, *q;
+	List phead;
+	ListNode  *pInsert, *q;
 	phead = new ListNode;
 	q = phead;//头节点存放数据
 	for (size_t i = 0; i < vec.size(); i++)

@@ -5,19 +5,29 @@
 #include"myheadfile.h"
 using namespace std;
 
-void swap(int *arr, int i, int j)
+void swap(vector<int> &arr, int i, int j)//传引用
 {
 	int temp = arr[i];
 	arr[i] = arr[j];
 	arr[j] = temp;
 }
+
+//void swap(vector<int> *arr, int i, int j)//传指针
+//{
+//	int temp = (*arr)[i];
+//	(*arr)[i] = (*arr)[j];
+//	(*arr)[j] = temp;
+//	arr->size();
+//}
+
 //冒泡排序 O(n2)
-void Bubble_Sort(int *arr,int length)
+void Bubble_Sort(vector<int> &arr)//点运算符用于获取对象成员;箭头运算符用于获取指针指向的对象的成员；
 {
-	if (length == 0) exit(1);
-	for (size_t i = 0; i < length; i++)
+	if (arr.empty()) exit(1);
+	int temp = arr[0];
+	for (size_t i = 0; i < arr.size(); i++)
 	{
-		for (size_t j = i; j < length; j++)
+		for (size_t j = i; j < arr.size(); j++)
 		{
 			if (arr[i] > arr[j])
 			{
@@ -28,14 +38,14 @@ void Bubble_Sort(int *arr,int length)
 }
 
 //选择排序 O(n2)
-void Select_Sort(int *arr, int length)
+void Select_Sort(vector<int> &arr)
 {
-	if (length == 0) exit(1);
+	if (arr.empty()) exit(1);
 	int index;
-	for (size_t i = 0; i < length ; i++)
+	for (size_t i = 0; i < arr.size() ; i++)
 	{
 		int minest = arr[i];	
-		for (size_t j = i; j < length ; j++)
+		for (size_t j = i; j < arr.size() ; j++)
 		{
 			if (minest > arr[j])
 			{
@@ -50,10 +60,10 @@ void Select_Sort(int *arr, int length)
 }
 
 //插入排序 O(n2)
-void Insert_Sort(int *arr,int length)
+void Insert_Sort(vector<int> &arr)
 {
-	if (length == 0) exit(1);
-	for (size_t i = 0; i < length - 1; i++)
+	if (arr.empty()) exit(1);
+	for (size_t i = 0; i < arr.size() - 1; i++)
 	{
 		int preindex = i;
 		int curent = arr[i+1];
@@ -66,14 +76,14 @@ void Insert_Sort(int *arr,int length)
 	}
 }
 //希尔排序 O（nlogn）
-void Shell_Sort(int *arr,int length)
+void Shell_Sort(vector<int> &arr)
 {
-	if (length == 0) exit(1);
-	int gap = length / 2;
+	if (arr.empty()) return;
+	int gap = arr.size() / 2;
 	
 	while (gap > 0)
 	{
-		for (size_t i = 0; i < length - gap; i++)
+		for (size_t i = 0; i < arr.size() - gap; i++)
 		{
 			int preindex = i;
 			int curent = arr[i+gap];//curent为后面的值
@@ -90,15 +100,15 @@ void Shell_Sort(int *arr,int length)
 }
 
 //归并排序 O(nlogn)
-void Merge_Sort(int *arr, int left, int mid, int right)
+void Merge_Sort(vector<int> &arr, int left, int mid, int right)
 {
 	int length = right - left + 1;
 	int *arr1 = new int[length];
-//	memset(arr1, 0, length * sizeof(int));  
+	memset(arr1, 0, length * sizeof(int));  
 	int index = 0;
-	int i = left,j = mid +1;
+	int i = left, j = mid + 1;
 	//int j = left;
-	while(i <= mid && j <= right)
+	while (i <= mid && j <= right)
 	{
 		arr1[index++] = arr[i] < arr[j] ? arr[i++] : arr[j++];
 	}
@@ -115,23 +125,21 @@ void Merge_Sort(int *arr, int left, int mid, int right)
 		arr[left++] = arr1[i];
 	}
 }
-
-void Merge(int *arr, int left, int right)
+void Merge(vector<int> &arr, int left, int right)
 {
-	if (left == right) exit(1);
+	if (left == right) return;
 	int mid = left + ((right - left) / 2);
-	if (left < right)
-	{
+	
 		Merge(arr, left, mid);
 		Merge(arr, mid + 1, right);
-	}
+
 	Merge_Sort(arr, left, mid, right);
 }
 
 //快速排序 O(nlogn)
-int GetIndex(int *arr, int left, int right)
+int GetIndex(vector<int> &arr, int left, int right)
 {
-	if (left > right)  exit(1);
+	if (left > right)  return 0;
 	int curent = arr[left];
 	while (left < right)
 	{
@@ -146,9 +154,9 @@ int GetIndex(int *arr, int left, int right)
 	return left;
 }
 
-void Quick_Sort(int *arr,int left,int right)
+void Quick_Sort(vector<int> &arr,int left,int right)
 {
-	if (left > right) exit(1);
+	if (left > right) return;
 	if (left < right)
 	{
 		int index = GetIndex(arr, left, right);
@@ -158,12 +166,12 @@ void Quick_Sort(int *arr,int left,int right)
 }
 
 //计数排序 O（n+k）
-void Count_Sort(int *arr,int length)
+void Count_Sort(vector<int> &arr)
 {
-	if (length == 0) exit(1);
+	if (arr.empty()) return;
 	int maxvalue = arr[0];
 	int minvalue = arr[0];
-	for (size_t i = 0; i < length; i++)
+	for (size_t i = 0; i < arr.size(); i++)
 	{
 		if (maxvalue < arr[i])
 		{
@@ -182,7 +190,7 @@ void Count_Sort(int *arr,int length)
 		newarr[i] = 0;
 	}
 	int index = 0;
-	for (size_t i = 0; i < length; i++)
+	for (size_t i = 0; i < arr.size(); i++)
 	{
 	    index = arr[i] - minvalue;
 		newarr[index]++;
@@ -199,9 +207,9 @@ void Count_Sort(int *arr,int length)
 }
 
 //堆排序
-void heap_Adjust(int *arr, int i, int length)
+void heap_Adjust(vector<int> &arr, int i, int length)
 {
-	//int temp = arr[i];
+	int temp = arr[i];
 	for(int left = 2 * i + 1; left < length; left = 2 * left + 1)
 	{
 		int right = left + 1;
@@ -211,27 +219,30 @@ void heap_Adjust(int *arr, int i, int length)
 		}
 		if (arr[i] < arr[left])
 		{
-		//	arr[i] = arr[left];
-			swap(arr, i, left);
+			arr[i] = arr[left];
+		//	swap(arr, i, left);
 			i = left;
 		}
 		else {
 			break;
 		}
-	//	arr[i] = temp;
+		arr[i] = temp;
 	}
 }
-void heap_Sort(int *arr, int length)
+
+void heap_Sort(vector<int> &arr)
 {
-	if (length == 0) exit(1);
-	for (int i = (length / 2) - 1 ; i >= 0; i--)
+	//if (arr.empty()) return;
+	int size = arr.size();
+	for (int i = (size / 2) - 1 ; i >= 0; i--)
 	{
-		heap_Adjust(arr,i,length);
+		heap_Adjust(arr,i, size);
 	}
-	while (length > 0)
+	while (size > 0)
 	{
-		swap(arr, 0, length-1);
-		length--;
-		heap_Adjust(arr, 0,length);
+		swap(arr, 0, size - 1);
+		size--;
+		heap_Adjust(arr, 0, size);
+		
 	}
 }

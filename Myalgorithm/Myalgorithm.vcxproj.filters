@@ -45,6 +45,24 @@
     <ClCompile Include="Search.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="CSingletom.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sqrt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GuapiJumpFloor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FindFirstCommonNode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LRUCache.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Produce_Consumer_Mode.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="myheadfile.h">
@@ -53,5 +71,14 @@
     <ClInclude Include="SortOrSearch.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Class.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_Lock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

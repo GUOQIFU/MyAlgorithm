@@ -2,7 +2,7 @@
 #include<vector>
 #include"myheadfile.h"
 
-void ListCout(ListNode *List)
+void ListCout(List List)
 {
 	ListNode *p;
 	p = List;
@@ -20,10 +20,20 @@ void ListCout(ListNode *List)
 		ReList = ReList->next;
 	}
 }
-void VectorCout(int *arr,int length)
+void VectorCout(vector<int> arr)
 {
-	for (size_t i = 0; i <= length; i++)
+	for (size_t i = 0; i < arr.size(); i++)
 	{
 		cout << arr[i] << ' ';
 	}
 }
+void IntCout(int *arr,int length)
+{
+	for (size_t i = 0; i < length; i++)
+	{
+		cout << arr[i] << ' ';
+	}
+}
+
+
+

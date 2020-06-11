@@ -2,7 +2,7 @@
 #include<string>
 #include"myheadfile.h"
 
-bool LoopList_is(ListNode *List)//快慢指针
+bool LoopList_is(List List)//快慢指针
 {
 	if (!List) return false;
 	ListNode *slowPointer, *fastpointer;
