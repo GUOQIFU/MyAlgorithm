@@ -94,6 +94,9 @@
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
+      <StackReserveSize>10000000</StackReserveSize>
+      <StackCommitSize>10000000</StackCommitSize>
+      <LargeAddressAware>true</LargeAddressAware>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,6 +130,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="GuoSearchTree.cpp" />
+    <ClCompile Include="Guo_Tree.cpp" />
     <ClCompile Include="Cin.cpp" />
     <ClCompile Include="Cout.cpp" />
     <ClCompile Include="CSingletom.cpp" />
@@ -137,16 +142,23 @@
     <ClCompile Include="LoopList_is.cpp" />
     <ClCompile Include="LRUCache.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Mystring.cpp" />
+    <ClCompile Include="My_strlen_strcpy_strcat_memcpy.cpp" />
     <ClCompile Include="Produce_Consumer_Mode.cpp" />
     <ClCompile Include="reverselist.cpp" />
     <ClCompile Include="Search.cpp" />
     <ClCompile Include="Sort.cpp" />
     <ClCompile Include="sqrt.cpp" />
+    <ClCompile Include="ThreadPool.cpp" />
+    <ClCompile Include="TreeOrderTravel.cpp" />
     <ClCompile Include="WordsNumOfString.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Class.h" />
+    <ClInclude Include="Tree.h" />
+    <ClInclude Include="class_LRU.h" />
+    <ClInclude Include="class_ThreadPool.h" />
     <ClInclude Include="myheadfile.h" />
+    <ClInclude Include="My_String.h" />
     <ClInclude Include="SortOrSearch.h" />
     <ClInclude Include="thread_Lock.h" />
   </ItemGroup>

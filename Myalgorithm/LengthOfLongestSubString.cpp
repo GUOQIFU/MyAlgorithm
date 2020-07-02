@@ -2,7 +2,7 @@
 #include<string>
 #include"myheadfile.h"
 
-int LengthOfLongestSubstring(string s)
+int LengthOfLongestSubstring(string s)//具有重复性质的字符串，数字等，创建标志位，以便后面判断是否重复
 {
 	int maxvalue = 0;
 	for (size_t i = 0; i < s.length(); i++)//找到s中最大值

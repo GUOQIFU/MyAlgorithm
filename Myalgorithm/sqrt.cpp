@@ -28,9 +28,9 @@ double sqrt1(double x)
 double sqrt2(double n)
 {
 	if (n == 0) return 0;
-	double last = 0.0;
+	double last = 0.01;
 	double x = 1.0;
-	while (x != last)
+	while (x < last)
 	{
 		last = x;
 		x = (x + n / x) / 2;//Å£¶Ùµü´ú·¨

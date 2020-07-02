@@ -1,4 +1,4 @@
-#include"Class.h"
+#include"class_LRU.h"
 #include"myheadfile.h"
 
 LRUCache::LRUCache(int size)//¹¹Ôìº¯Êý³õÊ¼»¯»º´æ´óÐ¡
@@ -76,12 +76,16 @@ void LRUCache::InserNode(int key,int value)//²åÈëÊý¾Ý£¬Èç¹û²åÈëµÄÊý¾ÝÔ­±¾´æÔÚ£¬¾
 		SetHead(Node);
 	}
 	else {
-		ListNode_LRU* NewNode = new ListNode_LRU(key, value);
+		ListNode_LRU* NewNode = new ListNode_LRU;
+		NewNode->m_key = key;
+		NewNode->m_value = value;
+		NewNode->pNext = NULL;
+		NewNode->pPre = NULL;
 		if (mp.size() >= m_capacity)//²åÈëÐÂ½ÚµãÅÐ¶ÏÊÇ·ñ³¬¹ý´æ´¢ÈÝÁ¿
 		{
 			map<int, ListNode_LRU*>::iterator it = mp.find(pTail->m_key);//Î²½Úµã
 			Remove(pTail);//ÒÆ³ýÎ²½Úµã£¬²åÈëÐÂ½Úµã
-			delete it->second;//É¾³ývalue ±£ÁôkeyÖµ
+			delete it->second;
 			mp.erase(it);
 		}
 		SetHead(NewNode);//·Åµ½Í·½Úµã
@@ -109,25 +113,12 @@ int LRUCache::GetSize()//»ñÈ¡´æ´¢ÈÝÁ¿
 	return mp.size();
 }
  
-//class LRU {
-//public:
-//	LRU(int size)
-//	{
-//		e_ca 
-//mpicity = size;
-//		pHead = NULL;
-//		pTail = NULL;
-//	}
-//	~LRU() {};
-//	void SetHead(ListNode_LRU* Node);//ÉèÖÃÍ·½Úµã
-//	void Remove(ListNode_LRU* Node);//½ÚµãµÄÒÆ³ý
-//	void NodeInsert(ListNode_LRU* Node);//ÐÂ½ÚµãµÄ²åÈë
-//	void GetSize();
-//	void GetValue(int key);
-//private:
-//	int e_campicity;
-//	ListNode_LRU* pHead;
-//	ListNode_LRU* pTail;
-//	map<int, ListNode_LRU> mp;
-//};
+void LRUCache::LRUCOUT()
+{
+	while (pHead != NULL)
+	{
+		cout << pHead->m_value << endl;
+		pHead = pHead->pNext;
+	}
+}
 

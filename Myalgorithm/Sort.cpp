@@ -136,6 +136,7 @@ void Merge(vector<int> &arr, int left, int right)
 	Merge_Sort(arr, left, mid, right);
 }
 
+
 //¿ìËÙÅÅĞò O(nlogn)
 int GetIndex(vector<int> &arr, int left, int right)
 {

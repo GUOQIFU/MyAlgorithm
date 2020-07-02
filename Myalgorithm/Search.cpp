@@ -69,6 +69,7 @@ int FibonacciSearch(int *arr, int value, int length)
 	{
 		arr1[i] = arr[length - i];//将新建的数组补齐
 	}
+
 	int low = 0, high = length - 1;
 	while (low <= high)
 	{

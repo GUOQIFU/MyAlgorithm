@@ -27,6 +27,27 @@ void VectorCout(vector<int> arr)
 		cout << arr[i] << ' ';
 	}
 }
+
+void StringCout(string s)
+{
+	for (size_t i = 0; i < s.length(); i++)
+	{
+		cout << s[i];
+	}
+	cout << endl;
+}
+
+void StrCout(const char *str)
+{
+	int length = strlen(str);
+	for (size_t i = 0; i < length; i++)
+	{
+		cout << str[i];
+	}
+	cout << endl;
+}
+
+
 void IntCout(int *arr,int length)
 {
 	for (size_t i = 0; i < length; i++)

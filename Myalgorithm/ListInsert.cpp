@@ -2,7 +2,7 @@
 #include<vector>
 #include"myheadfile.h"
 
-ListNode *ListInsert(vector<int> vec)
+ListNode *ListInsert(vector<int> vec)//一次性的插入
 {
 	if (vec.empty()) exit(1);
 	List phead;

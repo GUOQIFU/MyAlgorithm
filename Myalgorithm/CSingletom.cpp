@@ -1,5 +1,5 @@
 #include<iostream>
-#include "Class.h"
+#include "myheadfile.h"
 using namespace std;
 class CSingleton
 {

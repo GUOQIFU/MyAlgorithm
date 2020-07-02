@@ -13,55 +13,91 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Tree">
+      <UniqueIdentifier>{6abfa35a-e6dd-4bb1-9f81-14d2c144b39f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\List">
+      <UniqueIdentifier>{01198677-2bf0-4f6c-a819-8145bc0fc509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SortOrSearch">
+      <UniqueIdentifier>{78fa5048-6b6b-48e8-88bd-ec591617ec12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Algorithm">
+      <UniqueIdentifier>{a2f36fee-f71a-4294-ac57-a7b773c18184}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Base">
+      <UniqueIdentifier>{50ed8265-99e1-4eb9-b788-7d3f39a9d4b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\DesiginMode">
+      <UniqueIdentifier>{c8d806a5-c86f-44fb-b003-52d9eb4a22cd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Cin.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Guo_Tree.cpp">
+      <Filter>源文件\Tree</Filter>
     </ClCompile>
-    <ClCompile Include="Cout.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="TreeOrderTravel.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="GuoSearchTree.cpp">
+      <Filter>源文件\Tree</Filter>
     </ClCompile>
     <ClCompile Include="ListInsert.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\List</Filter>
     </ClCompile>
     <ClCompile Include="LoopList_is.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\List</Filter>
     </ClCompile>
     <ClCompile Include="reverselist.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="WordsNumOfString.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="LengthOfLongestSubString.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\List</Filter>
     </ClCompile>
     <ClCompile Include="Sort.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\SortOrSearch</Filter>
     </ClCompile>
     <ClCompile Include="Search.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="CSingletom.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="sqrt.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GuapiJumpFloor.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\SortOrSearch</Filter>
     </ClCompile>
     <ClCompile Include="FindFirstCommonNode.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\List</Filter>
+    </ClCompile>
+    <ClCompile Include="LengthOfLongestSubString.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="GuapiJumpFloor.cpp">
+      <Filter>源文件\Algorithm</Filter>
     </ClCompile>
     <ClCompile Include="LRUCache.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="sqrt.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="WordsNumOfString.cpp">
+      <Filter>源文件\Algorithm</Filter>
+    </ClCompile>
+    <ClCompile Include="Cin.cpp">
+      <Filter>源文件\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Cout.cpp">
+      <Filter>源文件\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="My_strlen_strcpy_strcat_memcpy.cpp">
+      <Filter>源文件\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="Mystring.cpp">
+      <Filter>源文件\Base</Filter>
     </ClCompile>
     <ClCompile Include="Produce_Consumer_Mode.cpp">
-      <Filter>源文件</Filter>
+      <Filter>源文件\DesiginMode</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>源文件\DesiginMode</Filter>
+    </ClCompile>
+    <ClCompile Include="CSingletom.cpp">
+      <Filter>源文件\DesiginMode</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -71,10 +107,19 @@
     <ClInclude Include="SortOrSearch.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Class.h">
+    <ClInclude Include="thread_Lock.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="thread_Lock.h">
+    <ClInclude Include="class_LRU.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="class_ThreadPool.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="My_String.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Tree.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
