@@ -17,7 +17,8 @@ public:
 		return p;
 	}
 };
-CSingleton *CSingleton::p = NULL;
+CSingleton *CSingleton::p = NULL;//ÀÁººÊ½
+//CSingleton *CSingleton::p = new CSingleton;//¶öººÊ½
 
 //int main()
 //{

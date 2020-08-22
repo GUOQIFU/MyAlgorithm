@@ -19,17 +19,20 @@
     <Filter Include="源文件\List">
       <UniqueIdentifier>{01198677-2bf0-4f6c-a819-8145bc0fc509}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\SortOrSearch">
-      <UniqueIdentifier>{78fa5048-6b6b-48e8-88bd-ec591617ec12}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Algorithm">
       <UniqueIdentifier>{a2f36fee-f71a-4294-ac57-a7b773c18184}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Base">
-      <UniqueIdentifier>{50ed8265-99e1-4eb9-b788-7d3f39a9d4b5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\DesiginMode">
       <UniqueIdentifier>{c8d806a5-c86f-44fb-b003-52d9eb4a22cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\LeetCode">
+      <UniqueIdentifier>{384c765b-dd4c-46ae-a9e3-0dcf008598f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Algorithm\SortOrSearch">
+      <UniqueIdentifier>{78fa5048-6b6b-48e8-88bd-ec591617ec12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\main">
+      <UniqueIdentifier>{50ed8265-99e1-4eb9-b788-7d3f39a9d4b5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -52,19 +55,13 @@
       <Filter>源文件\List</Filter>
     </ClCompile>
     <ClCompile Include="Sort.cpp">
-      <Filter>源文件\SortOrSearch</Filter>
+      <Filter>源文件\Algorithm\SortOrSearch</Filter>
     </ClCompile>
     <ClCompile Include="Search.cpp">
-      <Filter>源文件\SortOrSearch</Filter>
+      <Filter>源文件\Algorithm\SortOrSearch</Filter>
     </ClCompile>
     <ClCompile Include="FindFirstCommonNode.cpp">
       <Filter>源文件\List</Filter>
-    </ClCompile>
-    <ClCompile Include="LengthOfLongestSubString.cpp">
-      <Filter>源文件\Algorithm</Filter>
-    </ClCompile>
-    <ClCompile Include="GuapiJumpFloor.cpp">
-      <Filter>源文件\Algorithm</Filter>
     </ClCompile>
     <ClCompile Include="LRUCache.cpp">
       <Filter>源文件\Algorithm</Filter>
@@ -72,20 +69,17 @@
     <ClCompile Include="sqrt.cpp">
       <Filter>源文件\Algorithm</Filter>
     </ClCompile>
-    <ClCompile Include="WordsNumOfString.cpp">
-      <Filter>源文件\Algorithm</Filter>
-    </ClCompile>
     <ClCompile Include="Cin.cpp">
-      <Filter>源文件\Base</Filter>
+      <Filter>源文件\main</Filter>
     </ClCompile>
     <ClCompile Include="Cout.cpp">
-      <Filter>源文件\Base</Filter>
+      <Filter>源文件\main</Filter>
     </ClCompile>
     <ClCompile Include="My_strlen_strcpy_strcat_memcpy.cpp">
-      <Filter>源文件\Base</Filter>
+      <Filter>源文件\main</Filter>
     </ClCompile>
     <ClCompile Include="Mystring.cpp">
-      <Filter>源文件\Base</Filter>
+      <Filter>源文件\main</Filter>
     </ClCompile>
     <ClCompile Include="Produce_Consumer_Mode.cpp">
       <Filter>源文件\DesiginMode</Filter>
@@ -97,7 +91,73 @@
       <Filter>源文件\DesiginMode</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>源文件\Base</Filter>
+      <Filter>源文件\main</Filter>
+    </ClCompile>
+    <ClCompile Include="GetDepthBiTree.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="CountNodes.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeOrederTravelWithoutRecursion.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="IsBalancedTree.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="IsSameBitree.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="IsCompleteBitree.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="IsMirrorBitree.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="ReverseMirrorBItree.cpp">
+      <Filter>源文件\Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="doubleNumsSumOfArray.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="addTwoNumbers.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="LengthOfLongestSubString.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="GuapiJumpFloor.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="WordsNumOfString.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="FindMedianSortedArrays.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="pthread_mutex_t.cpp">
+      <Filter>源文件\DesiginMode</Filter>
+    </ClCompile>
+    <ClCompile Include="MinPathSum.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="StackAsQuene.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="QueneAsStack.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="permute.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="SolveNQueens.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="VecBjianVecA.cpp">
+      <Filter>源文件\LeetCode</Filter>
+    </ClCompile>
+    <ClCompile Include="maxProfit.cpp">
+      <Filter>源文件\LeetCode</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +180,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Tree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Leetcode.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

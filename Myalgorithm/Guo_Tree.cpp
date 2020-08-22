@@ -17,10 +17,15 @@ void BitTreeCout(TreeNode *Node)
 	cout << Node->value <<' ';
 }
 
-void Guo_Tree::Pre_CreatBiTree_Cin(BiTree &T)//按照随心所欲的创建二叉树结构，并输出
+void Guo_Tree::Pre_CreatBiTree_Cin(BiTree &T)//按照输入的创建二叉树结构，并输出
 {
 	int ch;
-	scanf("%d",&ch);
+	string s;
+	//scanf("%d",&ch);
+	cin >> ch; 
+	getline(cin, s);
+	//  cin >> ，cin.get，cin.getline。
+	//getline(cin,str);
 	if (ch == ' ')
 	{
 		T = NULL;
@@ -48,18 +53,17 @@ void Guo_Tree::Pre_CreatBitree_arr(BiTree &T, vector<int> &arr, int index)//层序
 }
 
 
-void Guo_Tree::InsertBiTreeNode(BiTree &T,int value)
-{
-	if (T = NULL)
-	{
-		T = NewTreeNode(value);
-	}
-	if (T)
-	{
-		T = T->Rchild;
-	}
-	T = NewTreeNode(value);
-}
+//void Guo_Tree::InsertBiTreeNode(BiTree &T,int value)
+//{
+//	if (T = NULL)
+//	{
+//		T = NewTreeNode(value);
+//	}
+//	if (T)
+//	{
+//		InsertBiTreeNode(T->Rchild,value);
+//	}
+//}
 
 
 

@@ -5,9 +5,9 @@
 ListNode *ListInsert(vector<int> vec)//一次性的插入
 {
 	if (vec.empty()) exit(1);
-	List phead;
+	ListNode *phead = new ListNode;
 	ListNode  *pInsert, *q;
-	phead = new ListNode;
+	//phead = new ListNode;
 	q = phead;//头节点存放数据
 	for (size_t i = 0; i < vec.size(); i++)
 	{

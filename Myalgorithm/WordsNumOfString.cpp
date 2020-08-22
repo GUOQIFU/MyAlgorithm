@@ -1,6 +1,7 @@
 #include<iostream>
 #include<stdio.h>
 #include"myheadfile.h"
+#include"Leetcode.h"
 
 int WordsNumOfString(string s)
 {

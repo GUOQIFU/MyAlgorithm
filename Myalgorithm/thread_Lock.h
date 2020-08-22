@@ -14,8 +14,7 @@ using namespace std;
 //typedef是允许结构体使用别名，如果不加的话，结构体不能有别名，会有重定义的错误。
 typedef struct ItemRepository//项目存储库
 {
-	int item_buffer[kItemRepositorySize];//缓冲区,缓冲区是生产者和消费者数据交互的渠道。
-										 //生产者生产的数据存入此数组中，然后消费者从此数组中取出数据。
+	int item_buffer[kItemRepositorySize];//缓冲区,缓冲区是生产者和消费者数据交互的渠道。										 //生产者生产的数据存入此数组中，然后消费者从此数组中取出数据。
 	size_t read_position;//消费者者读取产品位置
 	size_t write_position;//生产者写入产品位置
 	mutex mutexBuffer;//缓冲区互斥锁，避免多线程同时操作缓冲区
@@ -29,3 +28,5 @@ void ProducerTask(ItemRepository* ir);//生产者任务
 void ConsumerTask(ItemRepository* ir);//消费者任务
 ItemRepository* InitItemRepository(ItemRepository* ir);//项目初始化
 #endif
+
+

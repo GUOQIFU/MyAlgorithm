@@ -210,40 +210,64 @@ void Count_Sort(vector<int> &arr)
 //堆排序
 void heap_Adjust(vector<int> &arr, int i, int length)
 {
-	int temp = arr[i];
-	for(int left = 2 * i + 1; left < length; left = 2 * left + 1)
+	//int temp = arr[i];
+	for (int left = 2 * i + 1; left < length; left = 2 * left + 1)
 	{
 		int right = left + 1;
 		if (right < length && arr[left] < arr[right])//如果右节点大于左节点
 		{
 			left++;
 		}
-		if (arr[i] < arr[left])
+		if (arr[i] < arr[left])//arr[i] 变量，注意
 		{
+			int temp = arr[i];
 			arr[i] = arr[left];
-		//	swap(arr, i, left);
+			arr[left] = temp;
 			i = left;
 		}
-		else {
-			break;
-		}
-		arr[i] = temp;
 	}
 }
-
 void heap_Sort(vector<int> &arr)
 {
-	//if (arr.empty()) return;
 	int size = arr.size();
-	for (int i = (size / 2) - 1 ; i >= 0; i--)
+	for (int i = (size / 2) - 1 ; i >= 0; i--)//构造大顶堆
 	{
 		heap_Adjust(arr,i, size);
 	}
-	while (size > 0)
+	//
+	for (size_t i = arr.size() - 1; i > 0; i--)
 	{
-		swap(arr, 0, size - 1);
-		size--;
-		heap_Adjust(arr, 0, size);
-		
+		swap(arr, 0, i);
+		heap_Adjust(arr, 0, i);
+	}
+}
+
+
+	//arr[i] = temp;
+
+
+
+int GetIndex(vector<int> &arr,int left,int right)
+{
+	if (left == right) return 0;
+	int current = arr[left];
+	while (left < right && current < arr[right])
+		right--;
+	arr[left] = arr[right];
+	while (left < right && current > arr[left])
+		left++;
+	arr[right] = arr[left];
+	arr[left] = current;
+	return left;
+}
+
+void QuickSort(vector<int> &arr,int left,int right)
+{
+	if (arr.size() == 0) return;
+	int Index = GetIndex(arr, left, right);
+	if (left < right)
+	{
+		QuickSort(arr, left, Index - 1);
+		QuickSort(arr, Index + 1, right);
 	}
 }

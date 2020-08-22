@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<stdio.h>
 #include<mutex>//互斥锁，多线程访问统一资源时，防止资源被同时访问出错
@@ -10,6 +9,9 @@ mutex mutexCout;// 全局多线程输出锁，避免多线程同时访问输出窗口
 void ProduceItem(ItemRepository* ir, int item)//生产者生产
 {
 	unique_lock<mutex> lock(ir->mutexBuffer);//缓冲区加锁，此时只能生产者操作缓冲区，消费者等待
+
+	//pthread_mutex_lock(&ir->mutexBuffer);
+	
 	while(ir->write_position == kItemRepositorySize - 1)//?????判断缓冲区是否已满
 	{
 		ir->write_position = 0;//标志位 归0
@@ -18,17 +20,20 @@ void ProduceItem(ItemRepository* ir, int item)//生产者生产
 			cout << "缓冲区已满，请等待消费者消费" << endl;
 		}
 		(ir->repo_not_empty).notify_all();//通知消费者缓冲区不为空
-		(ir->repo_not_full).wait(lock);//说明缓冲区已满，生产者阻塞在这里，开始等待消费者线程给的通知消息。	
+		(ir->repo_not_full).wait(lock);//说明缓冲区已满，生产者阻塞在这里，开始等待消费者线程给的通知消息。
+		//pthread_cond_signal(&ir->repo_not_empty);
+		//pthread_cond_wait(&ir->repo_not_full, &ir->mutexBuffer);
 		lock.unlock();//解锁
+		
 	}
 	(ir->item_buffer)[ir->write_position] = item;//当缓冲区不满，就向其写入数据
 	ir->write_position++;//标志位++
-	
 }
 
 int ConsumeItem(ItemRepository* ir)//消费者消费
 {
 	unique_lock<mutex> lock(ir->mutexBuffer);
+	
 	while(ir->read_position == kItemRepositorySize - 1)//判断缓冲区是否为空
 	{
 		ir->read_position = 0;
@@ -74,6 +79,7 @@ void ConsumerTask(ItemRepository* ir)//消费者任务
 		//if (++cnt == kItemRepositorySize) break;
 	}
 }
+
 
 ItemRepository* InitItemRepository(ItemRepository* ir)//项目初始化
 {

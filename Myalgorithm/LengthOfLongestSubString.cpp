@@ -1,6 +1,7 @@
 #include<iostream>
 #include<string>
 #include"myheadfile.h"
+#include"Leetcode.h"
 
 int LengthOfLongestSubstring(string s)//具有重复性质的字符串，数字等，创建标志位，以便后面判断是否重复
 {

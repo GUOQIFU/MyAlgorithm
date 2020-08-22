@@ -26,11 +26,10 @@ void Back_OrderTraverse(BiTree &T)
 {
 	if (T)
 	{
-		Mid_OrderTraverse(T->Lchild);
-		Mid_OrderTraverse(T->Rchild);
+		Back_OrderTraverse(T->Lchild);
+		Back_OrderTraverse(T->Rchild);
 		BitTreeCout(T);
 	}
 }
-
 
 #endif // !TREEORDERTRAVEL_H

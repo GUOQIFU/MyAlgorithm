@@ -1,4 +1,1 @@
-﻿  GuoSearchTree.cpp
-f:\myalgorithm\myalgorithm\myalgorithm\guosearchtree.cpp(18): warning C4715: “Guo_SearchTree::InsertSerchTreeNode”: 不是所有的控件路径都返回值
-f:\myalgorithm\myalgorithm\myalgorithm\guosearchtree.cpp(36): warning C4715: “Guo_SearchTree::SearchValue”: 不是所有的控件路径都返回值
-  Myalgorithm.vcxproj -> F:\Myalgorithm\Myalgorithm\Debug\MyAlgorithm.exe
+﻿  Myalgorithm.vcxproj -> F:\Myalgorithm\Myalgorithm\Debug\MyAlgorithm.exe

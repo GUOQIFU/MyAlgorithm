@@ -2,11 +2,11 @@
 
 int Guo_SearchTree::InsertSerchTreeNode(BiTree &T, int value)//搜索二叉树 插入
 {
-	TreeNode *p;
+	//TreeNode *p;
 	if (T == NULL)
 	{
-		p = NewTreeNode(value);
-		T = p;
+		T = NewTreeNode(value);
+		//T = p;
 	}
 	else {
 		if (value == T->value) return -1;
@@ -16,13 +16,14 @@ int Guo_SearchTree::InsertSerchTreeNode(BiTree &T, int value)//搜索二叉树 插入
 		}
 	}
 }
+
 TreeNode *Guo_SearchTree::SearchValue(BiTree &T, int value)
 {
 	if (T == NULL) return NULL;
 	else {
 		if (value == T->value)
 		{
-			cout << "成功找到"<< value <<"该节点" << endl;
+			cout << "成功找到 "<< value <<" 节点" << endl;
 			return T;	
 		}
 		else {

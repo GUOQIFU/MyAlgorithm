@@ -13,18 +13,30 @@ void ListCout(List List)
 	}
 	cout << "\n";
 	p = List;
-	ListNode *ReList = ReverseList(p);//翻转链表
-	while (ReList != NULL)
-	{
-		cout << ReList->val << " ";
-		ReList = ReList->next;
-	}
+	//ListNode *ReList = ReverseList(p);//翻转链表
+	//while (ReList != NULL)
+	//{
+	//	cout << ReList->val << " ";
+	//	ReList = ReList->next;
+	//}
 }
 void VectorCout(vector<int> arr)
 {
 	for (size_t i = 0; i < arr.size(); i++)
 	{
 		cout << arr[i] << ' ';
+	}
+}
+
+void DoubleVectorCout(vector<vector<int>> &vec)
+{
+	for (size_t i = 0; i < vec.size(); i++)
+	{
+		for (size_t j = 0; j < vec[i].size(); j++)
+		{
+			cout << vec[i][j] << ' ';
+		}
+		cout << "\n";
 	}
 }
 
